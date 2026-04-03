@@ -1,4 +1,4 @@
-# obsidian-privacy-mosaic
+# privacy-mosaic
 
 [English README](./README.md)
 
