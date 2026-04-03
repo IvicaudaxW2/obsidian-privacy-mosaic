@@ -72,10 +72,13 @@ export default class MosaicSpoilerPlugin extends Plugin {
 	}
 
 	async loadSettings(): Promise<void> {
+		const loadedData = (await this.loadData()) as
+			| Partial<MosaicSpoilerSettings>
+			| null;
 		this.settings = Object.assign(
 			{},
 			DEFAULT_SETTINGS,
-			await this.loadData()
+			loadedData ?? {}
 		);
 	}
 

@@ -16,7 +16,7 @@ export class MosaicSpoilerSettingTab extends PluginSettingTab {
 		new Setting(containerEl)
 			.setName("Enable in editing mode")
 			.setDesc(
-				"Apply mosaic blur in Live Preview (editing) mode. When disabled, blur only works in reading mode."
+				"Apply mosaic blur in live preview (editing) mode. When disabled, blur only works in reading mode."
 			)
 			.addToggle((toggle) =>
 				toggle
@@ -31,7 +31,7 @@ export class MosaicSpoilerSettingTab extends PluginSettingTab {
 		new Setting(containerEl)
 			.setName("Reveal mode")
 			.setDesc(
-				"How to reveal blurred content. Hover mode auto-reveals on mouse over; Double-click mode requires a double-click to toggle."
+				"How to reveal blurred content. Hover mode auto-reveals on mouse over; double-click mode requires a double-click to toggle."
 			)
 			.addDropdown((dropdown) =>
 				dropdown

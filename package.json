@@ -1,26 +1,36 @@
 {
-	"name": "obsidian-privacy-mosaic",
-	"version": "1.0.0",
-	"description": "Privacy-focused blur and mosaic masking for text and images using ++content++ syntax.",
-	"main": "main.js",
-	"scripts": {
-		"dev": "node esbuild.config.mjs",
-		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production"
-	},
-	"keywords": [
-		"obsidian",
-		"plugin",
-		"blur",
-		"mosaic",
-		"privacy"
-	],
-	"license": "MIT",
-	"devDependencies": {
-		"@types/node": "^16.11.6",
-		"builtin-modules": "^3.3.0",
-		"esbuild": "0.17.3",
-		"obsidian": "latest",
-		"tslib": "2.4.0",
-		"typescript": "4.7.4"
-	}
+  "name": "obsidian-privacy-mosaic",
+  "version": "1.0.0",
+  "description": "Privacy-focused blur and mosaic masking for text and images using ++content++ syntax.",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "keywords": [
+    "obsidian",
+    "plugin",
+    "blur",
+    "mosaic",
+    "privacy"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^16.11.6",
+    "@typescript-eslint/parser": "^8.0.0",
+    "esbuild": "0.17.3",
+    "eslint": "^10.1.0",
+    "eslint-plugin-obsidianmd": "^0.1.9",
+    "obsidian": "latest",
+    "tslib": "2.4.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@codemirror/state": "^6.6.0",
+    "@codemirror/view": "^6.41.0"
+  }
 }

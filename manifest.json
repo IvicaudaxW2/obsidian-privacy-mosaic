@@ -1,9 +1,10 @@
 {
 	"id": "privacy-mosaic",
-	"name": "Privacy Mosaic",
+	"name": "Privacy mosaic",
 	"version": "1.0.0",
 	"minAppVersion": "1.0.0",
 	"description": "Privacy-focused blur and mosaic masking for text and images using ++content++ syntax.",
 	"author": "IvicaudaxW2",
+	"authorUrl": "https://github.com/IvicaudaxW2",
 	"isDesktopOnly": false
 }

@@ -260,7 +260,6 @@ export function createLivePreviewExtension(
 						"mosaic-img-blurred",
 						MOSAIC_REVEALED_CLASS
 					);
-					el.style.removeProperty("cursor");
 				}
 				this.blurredTargets.clear();
 			}
@@ -331,14 +330,12 @@ export function createLivePreviewExtension(
 							"mosaic-img-blurred",
 							MOSAIC_REVEALED_CLASS
 						);
-						el.style.removeProperty("cursor");
 					}
 				}
 
 				for (const el of nextBlurredTargets) {
 					if (!this.blurredTargets.has(el)) {
 						el.classList.add(MOSAIC_BLUR_CLASS, "mosaic-img-blurred");
-						el.style.cursor = "pointer";
 					}
 				}
 
