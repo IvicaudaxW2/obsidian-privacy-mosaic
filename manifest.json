@@ -1,0 +1,9 @@
+{
+	"id": "obsidian-privacy-mosaic",
+	"name": "Privacy Mosaic",
+	"version": "1.0.0",
+	"minAppVersion": "1.0.0",
+	"description": "Privacy-focused blur and mosaic masking for text and images using ++content++ syntax.",
+	"author": "IvicaudaxW2",
+	"isDesktopOnly": false
+}

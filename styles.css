@@ -1,0 +1,82 @@
+/* === CSS Custom Properties (defaults, overridden by JS) === */
+body {
+	--mosaic-blur-strength: 8px;
+	--mosaic-transition-duration: 200ms;
+}
+
+/* === Base blur (text, images, embeds) === */
+.mosaic-blur {
+	filter: blur(var(--mosaic-blur-strength));
+	transition: filter var(--mosaic-transition-duration) ease;
+	cursor: pointer;
+	user-select: none;
+	border-radius: var(--radius-s);
+}
+
+.mosaic-reading-image-inline {
+	display: inline-block;
+}
+
+.markdown-rendered p > .mosaic-reading-image-inline:first-child:last-child {
+	display: block !important;
+	width: fit-content;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mosaic-reading-image-block {
+	display: block;
+	width: fit-content;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* === Invisible marker widgets (anchors for image blur) === */
+.mosaic-img-open,
+.mosaic-img-close {
+	display: inline;
+	font-size: 0;
+	line-height: 0;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+/* === Collapse empty lines left by hidden ++ markers === */
+.mosaic-collapsed-line {
+	height: 0 !important;
+	min-height: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	overflow: hidden !important;
+	font-size: 0 !important;
+	line-height: 0 !important;
+}
+
+/* === Hover reveal === */
+body.mosaic-hover-mode .mosaic-blur:hover {
+	filter: none;
+	user-select: auto;
+}
+
+/* === Double-click reveal (toggled by JS) === */
+.mosaic-blur.mosaic-revealed {
+	filter: none;
+	user-select: auto;
+}
+
+/* === Global reveal (toggled by command) === */
+body.mosaic-all-revealed .mosaic-blur {
+	filter: none !important;
+	user-select: auto;
+}
+
+/* === Mobile: tap to reveal === */
+@media (hover: none) and (pointer: coarse) {
+	body.mosaic-hover-mode .mosaic-blur:active {
+		filter: none;
+		user-select: auto;
+	}
+}

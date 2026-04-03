@@ -1,0 +1,21 @@
+# Build output
+main.js
+
+# npm
+node_modules
+
+# IDE
+.idea
+.vscode
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Obsidian
+data.json
+
+# 忽略
+.idea/
+.vscode/
+.claude/
